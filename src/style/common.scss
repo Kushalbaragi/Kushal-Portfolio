@@ -9,6 +9,9 @@
 }
 body {
   background-color: $black-color;
+  // background: url('../assets/lin-bg.jpg');
+  // background-repeat: no-repeat;
+  // background-size:cover;
 }
 .container {
   display: flex;
@@ -26,41 +29,69 @@ body {
 
 .button-primary {
     width: fit-content;
-    padding: 8px 15px;
+    padding: 5px 15px;
     background-color: transparent;
     color: $white-color;
     border: 1px solid $white-color;
     text-align: center;
+    font-size: 14px;
+    line-height: 22.9px;
+    font-weight: 300;
+    border-radius: 10px;
+    margin-right: 21px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    &:hover{
+      background-color: $small-btn-bg-color;
+      border: 1px solid $small-btn-bg-color;
+    }
+  @media screen and (min-width: $desktop-sm) {
     font-size: 16px;
     line-height: 25.8px;
     font-weight: 300;
     border-radius: 10px;
   }
 
+  }
+
 .button-secondary {
+  margin-right: 15px;
   width: fit-content;
-  padding: 8px 15px;
+  padding: 4px 10px;
   background-color: $small-btn-bg-color;
   color: $white-color;
   border: none;
+  border-radius: 9px;
   text-align: center;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 25.8px;
   font-weight: 300;
+  margin-bottom: 15px;
+  @media screen and (min-width: $desktop-sm) {
+    font-size: 16px;
+    line-height: 25.8px;
+    font-weight: 300;
+    margin-bottom: 21px;
+  padding: 4px 12px;
+  margin-right: 21px;
+
+
+  }
+
 }
 
-.small-btn {
-  width: fit-content;
-  padding: 10px 30px;
-  background: transparent;
-  color: $white-color;
-  border: 1px solid $white-color;
-  text-align: center;
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 300;
-}
+.sub-title{
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  opacity: 0.75;
+  margin-bottom: 5px;
+  @media screen and (min-width: $desktop-sm) {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
 
+}
 .sub-heading {
   font-size: 18px;
   font-weight: 700;
@@ -119,10 +150,21 @@ strong {
 
 .card {
   padding: 20px;
+  background-color: $card-bg-color;
   @media screen and (min-width: $desktop-sm) {
     padding: 40px;
   }
 }
+.m-0{
+  margin: 0;
+}
+.m-15 {
+  margin-bottom: 8px;
+  @media screen and (min-width: $desktop-sm) {
+    margin-bottom: 15px;
+  }
+}
+
 .m-21 {
   margin-bottom: 10px;
   @media screen and (min-width: $desktop-sm) {
@@ -145,5 +187,39 @@ strong {
   margin-bottom: 30px;
   @media screen and (min-width: $desktop-sm) {
     margin-bottom: 60px;
+  }
+}
+.m-120 {
+  margin-bottom: 60px;
+  @media screen and (min-width: $desktop-sm) {
+    margin-bottom: 120px;
+  }
+}
+
+.sub-heading{
+  img{
+      vertical-align: middle;
+      margin-right: 5px;
+      margin-bottom: 5px;
+  }
+}
+button{
+  img{
+      vertical-align: middle;
+      margin-left: 5px;
+  }
+}
+hr{
+  opacity: 0.75;
+}
+
+.b-500{
+  font-weight: 500;
+}
+.f-24{
+  font-size: 18px;
+  @media screen and (min-width: $desktop-sm) {
+  font-size: 24px;
+
   }
 }

@@ -1,12 +1,13 @@
 import React from "react";
 import myPhoto from "../assets/myPhoto.png";
 import send from '../assets/send.png';
+import account from '../assets/User_fill.png';
 
 function AboutMe() {
   return (
-    <section className="aboutMe-wrapper">
-      <img className="m-30" src={myPhoto} alt="profile photo" />
-      <p className="sub-heading m-30">About Me</p>
+    <section className="aboutMe-wrapper m-60">
+      <img className="m-30" src={myPhoto} alt="profile" />
+      <p className="sub-heading m-30"><img src={account} alt='account-icon'/>About Me</p>
       <div className="body-txt">
         Front end developer working in <strong>Mindtree</strong> having 2 years
         of industrial expertise in ReactJS. Proficient in big commerce,
