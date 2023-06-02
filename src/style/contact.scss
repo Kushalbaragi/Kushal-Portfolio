@@ -1,0 +1,49 @@
+.contact-wrapper {
+  text-align: center;
+  padding: 0 0px;
+  @media screen and (min-width: $desktop-sm) {
+    padding: 0 40px;
+  }
+
+  form {
+    input {
+      width: 100%;
+      display: block;
+      color: $white-color;
+      padding: 15px 0;
+      border: 0;
+      border-bottom: 1px solid $white-color;
+      background: transparent;
+      font-size: 18px;
+      &::placeholder {
+        color: $small-btn-bg-color;
+        font-size: 20px;
+        font-family: 500;
+        padding: 5px 0;
+      }
+      &:focus{
+        border: none;
+        background-color: transparent;
+
+      }
+    }
+    button{
+    }
+  }
+  .bottom-wrapper{
+    text-align: left;
+    margin:20px 0;
+  @media screen and (min-width: $desktop-sm) {
+    margin:40px 0;
+
+  }
+  .bottom{
+    font-weight: 500;
+    img{
+        vertical-align: middle;
+        margin-right: 5px;
+        margin-bottom: 2px;
+    }
+  }
+}
+}
