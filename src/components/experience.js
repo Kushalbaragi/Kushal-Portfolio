@@ -1,6 +1,6 @@
 import React from 'react'
 import company from '../assets/office.png'
-import experience from '../assets/Vector.png'
+import experience from '../assets/briefcase.png'
 import send from '../assets/send.png';
 
 

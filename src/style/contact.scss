@@ -1,6 +1,9 @@
 .contact-wrapper {
   text-align: center;
-  padding: 0 40px;
+  padding: 0 0px;
+  @media screen and (min-width: $desktop-sm) {
+    padding: 0 40px;
+  }
 
   form {
     input {
@@ -24,5 +27,23 @@
 
       }
     }
+    button{
+    }
   }
+  .bottom-wrapper{
+    text-align: left;
+    margin:20px 0;
+  @media screen and (min-width: $desktop-sm) {
+    margin:40px 0;
+
+  }
+  .bottom{
+    font-weight: 500;
+    img{
+        vertical-align: middle;
+        margin-right: 5px;
+        margin-bottom: 2px;
+    }
+  }
+}
 }

@@ -1,7 +1,8 @@
 import React from "react";
 import mail from "../assets/mail.png";
 import hand from '../assets/hand.png'
-import external from "../assets/External.png";
+import external from "../assets/External.png"
+import location from '../assets/map-pin.png';
 
 
 function Contact() {
@@ -18,6 +19,11 @@ function Contact() {
         <input className='m-40' type="text" name='message' placeholder="Your Message"/>
       <button className='button-primary'>Submit <img src={external} alt='send-icon'/></button>
       </form>
+      <div className='bottom-wrapper'>
+      <p className="bottom body-txt"><img src={mail} alt='mail-icon'/>Email : <a href='mailto:kushalbaragi83@gmail.com'>Kushalbaragi83@gmail.com</a></p>
+      <p className="bottom body-txt"><img src={location} alt='location-icon'/>Bangalore, Karnataka, India</p>
+      </div>
+     
     </div>
   );
 }
