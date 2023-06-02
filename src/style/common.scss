@@ -1,0 +1,149 @@
+@import "./variable.scss";
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  color: $white-color;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: $black-color;
+}
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  @media screen and (max-width: $desktop-sm) {
+    max-width: 801px;
+    padding: 0 24px;
+    width: 100%;
+  }
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 120px;
+}
+
+.button-primary {
+    width: fit-content;
+    padding: 8px 15px;
+    background-color: transparent;
+    color: $white-color;
+    border: 1px solid $white-color;
+    text-align: center;
+    font-size: 16px;
+    line-height: 25.8px;
+    font-weight: 300;
+    border-radius: 10px;
+  }
+
+.button-secondary {
+  width: fit-content;
+  padding: 8px 15px;
+  background-color: $small-btn-bg-color;
+  color: $white-color;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  line-height: 25.8px;
+  font-weight: 300;
+}
+
+.small-btn {
+  width: fit-content;
+  padding: 10px 30px;
+  background: transparent;
+  color: $white-color;
+  border: 1px solid $white-color;
+  text-align: center;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.sub-heading {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 15px;
+  @media screen and (min-width: $desktop-sm) {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 39px;
+    margin-bottom: 30px;
+  }
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 25.8px;
+  margin-bottom: 15px;
+  @media screen and (min-width: $desktop-sm) {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 35.5px;
+    margin-bottom: 21px;
+  }
+}
+
+.body-txt {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22.8px;
+  margin-bottom: 10px;
+  @media screen and (min-width: $desktop-sm) {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 21px;
+  }
+}
+li {
+  list-style: none;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22.8px;
+  margin-bottom: 10px;
+  @media screen and (min-width: $desktop-sm) {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 21px;
+  }
+}
+
+strong {
+  font-weight: 500;
+}
+
+.card {
+  padding: 20px;
+  @media screen and (min-width: $desktop-sm) {
+    padding: 40px;
+  }
+}
+.m-21 {
+  margin-bottom: 10px;
+  @media screen and (min-width: $desktop-sm) {
+    margin-bottom: 21px;
+  }
+}
+.m-30 {
+  margin-bottom: 15px;
+  @media screen and (min-width: $desktop-sm) {
+    margin-bottom: 30px;
+  }
+}
+.m-40 {
+  margin-bottom: 20px;
+  @media screen and (min-width: $desktop-sm) {
+    margin-bottom: 40px;
+  }
+}
+.m-60 {
+  margin-bottom: 30px;
+  @media screen and (min-width: $desktop-sm) {
+    margin-bottom: 60px;
+  }
+}
