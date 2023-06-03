@@ -1,5 +1,6 @@
 import React, { useEffect} from "react";
 import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/all";
 import profile from "../assets/profile.png";
 import linkedIn from "../assets/linkedIn.png";
 import leetCode from "../assets/leetCode.png";
@@ -17,7 +18,6 @@ function Homepage() {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        console.log(entry);
         if (entry.isIntersecting) {
           entry.target.classList.add("show");
         } else {
@@ -32,16 +32,32 @@ function Homepage() {
       opacity:0,
       x:200,
       stagger:0.2,
-      delay:2
+      delay:1.2
     })
+    gsap.from('.bottom-links',{
+      opacity:0,
+      delay:2.7
+    })
+    gsap.from('.body-txt',{
+      opacity:0,
+      delay:0.75,
+      y:40,
+      stagger:0.2
+    })
+    gsap.from('.scroll-down',{
+      opacity:0,
+      delay:3.25,
+      y:-40,
+    })
+   
   });
 
   return (
     <div id='smoothwrapper'>
     <div id='home' className="homePage-wrapper">
       <div className="left-wrapper">
-        <h1>Kushal Baragi</h1>
-        <div className="role">Front End Developer</div>
+        <h1 className='titleAnimation'>Kushal Baragi</h1>
+        <div className="role titleAnimation">Front End Developer</div>
         <div className="body-txt">
           a passionate front end Developer having
           <strong> 2+ years of Industrial experience</strong> in Web Development
