@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect} from "react";
+import gsap from 'gsap';
 import profile from "../assets/profile.png";
 import linkedIn from "../assets/linkedIn.png";
 import leetCode from "../assets/leetCode.png";
@@ -9,11 +10,34 @@ import TechStack from "./techStack";
 import Experience from "./experience";
 import Education from "./education";
 import Projects from "./projects";
-import contact from "./contact";
 import Contact from "./contact";
 
 function Homepage() {
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show");
+        }
+      });
+    });
+
+    let hiddenElement = document.querySelectorAll(".navbar-aniamtion");
+    hiddenElement.forEach((el) => observer.observe(el));
+    gsap.from(hiddenElement,{
+      opacity:0,
+      x:200,
+      stagger:0.2,
+      delay:2
+    })
+  });
+
   return (
+    <div id='smoothwrapper'>
     <div id='home' className="homePage-wrapper">
       <div className="left-wrapper">
         <h1>Kushal Baragi</h1>
@@ -29,35 +53,58 @@ function Homepage() {
           reviews of gadgets.
         </div>
         <ul className="navBar">
-          <li>
+          <li className='navbar-aniamtion'>
             <span className="number">01</span>
             <span className="line"></span>
-            <a href='#aboutMe' ><span className="menu">AboutMe</span></a>
+            <span className="menu" onClick={()=>{
+            document
+            .querySelector("#aboutMe")
+            .scrollIntoView({ behavior: "smooth"});
+          }}>{' '}AboutMe</span>
           </li>
-          <li>
+          <li className='navbar-aniamtion'>
             <span className="number">02</span>
             <span className="line"></span>
-            <a href='#techStack' ><span className="menu">Tech Stack</span></a>
+            <span className="menu" onClick={()=>{
+            document
+            .querySelector("#techStack")
+            .scrollIntoView({ behavior: "smooth"});
+          }}>Tech Stack</span>
           </li>
-          <li>
+          <li className='navbar-aniamtion'>
             <span className="number">03</span>
             <span className="line"></span>
-            <a href='#experience' ><span className="menu">Experience</span></a>
+            <span className="menu" onClick={()=>{
+            document
+            .querySelector("#experience")
+            .scrollIntoView({ behavior: "smooth" });
+          }}>Experience</span>
           </li>
-          <li>
+          <li className='navbar-aniamtion'>
             <span className="number">04</span>
             <span className="line"></span>
-            <a href='#education' ><span className="menu">Education</span></a>
+            <span className="menu" onClick={()=>{
+            document
+            .querySelector("#education")
+            .scrollIntoView({ behavior: "smooth" })}}>Education</span>
           </li>
-          <li>
+          <li className='navbar-aniamtion'>
             <span className="number">05</span>
             <span className="line"></span>
-            <a href='#personal-projects' ><span className="menu">Projects</span></a>
+            <a href='#personal-projects' ><span className="menu" onClick={()=>{
+            document
+            .querySelector("#personal-projects")
+            .scrollIntoView({ behavior: "smooth" });
+          }}>Projects</span></a>
           </li>
-          <li>
+          <li className='navbar-aniamtion'>
             <span className="number">06</span>
             <span className="line"></span>
-            <a href='#contact' ><span className="menu">Contacts</span></a>
+            <span className="menu" onClick={()=>{
+            document
+            .querySelector("#contact")
+            .scrollIntoView({ behavior: "smooth" });
+          }}>Contacts</span>
           </li>
         </ul>
         <ul className="bottom-links ">
@@ -88,7 +135,7 @@ function Homepage() {
             <span>SCROLL DOWN</span>
           </div>
         </div>
-        <hr class='mobile'/>
+        <hr className='mobile'/>
         <AboutMe />
         <hr/>
         <TechStack />
@@ -102,7 +149,8 @@ function Homepage() {
         <Contact />
       </div>
     </div>
+    </div>
   );
 }
 
-export default Homepage;
+export default Homepage;  
