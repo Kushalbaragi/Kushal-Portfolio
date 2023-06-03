@@ -1,6 +1,5 @@
 import React, { useEffect} from "react";
 import gsap from 'gsap';
-import { ScrollTrigger } from "gsap/all";
 import profile from "../assets/profile.png";
 import linkedIn from "../assets/linkedIn.png";
 import leetCode from "../assets/leetCode.png";
@@ -38,7 +37,7 @@ function Homepage() {
       opacity:0,
       delay:2.7
     })
-    gsap.from('.body-txt',{
+    gsap.from('.left-wrapper .body-txt',{
       opacity:0,
       delay:0.75,
       y:40,
@@ -49,7 +48,7 @@ function Homepage() {
       delay:3.25,
       y:-40,
     })
-   
+  
   });
 
   return (

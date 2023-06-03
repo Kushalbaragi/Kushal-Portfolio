@@ -1,0 +1,16 @@
+.projects-wrapper{
+    .card{
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateX(200px);
+        transition: all 1s;
+        transition-delay: 0.5s;
+    }
+    
+    .show{
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+
+    }
+}

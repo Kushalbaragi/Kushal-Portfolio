@@ -9,9 +9,7 @@
 }
 body {
   background-color: $black-color;
-  // background: url('../assets/lin-bg.jpg');
-  // background-repeat: no-repeat;
-  // background-size:cover;
+  position: relative;
 }
 .container {
   display: flex;
@@ -215,7 +213,6 @@ hr{
   margin: 40px 0;
   @media screen and (min-width: $desktop-sm) {
   margin: 60px 0;
-
   }
 }
 
@@ -247,4 +244,8 @@ hr{
 
 .card .button-primary{
   margin-top: 5px;
+}
+
+.red{
+  color: red;
 }
