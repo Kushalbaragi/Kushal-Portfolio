@@ -7,7 +7,7 @@ import location from '../assets/map-pin.png';
 
 function Contact() {
   return (
-    <div className="contact-wrapper m-60">
+    <div id='contact' className="slide contact-wrapper m-60">
       <p className="sub-heading">
         Say Hello
         <img src={hand} alt="office-icon" />
@@ -22,6 +22,13 @@ function Contact() {
       <div className='bottom-wrapper'>
       <p className="bottom body-txt"><img src={mail} alt='mail-icon'/>Email : <a href='mailto:kushalbaragi83@gmail.com'>Kushalbaragi83@gmail.com</a></p>
       <p className="bottom body-txt"><img src={location} alt='location-icon'/>Bangalore, Karnataka, India</p>
+      </div>
+      <div style={{textAlign:'center'}}>
+
+
+      <div style={{opacity:'0.5'}} className='mobile'>
+        Designed by Kushal
+      </div>
       </div>
      
     </div>

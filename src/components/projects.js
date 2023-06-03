@@ -5,7 +5,7 @@ import gitHub from "../assets/gitHub.png";
 
 function Projects() {
   return (
-    <div className="projects-wrapper m-60">
+    <div id='personal-projects' className="projects-wrapper m-60">
       <p className="sub-heading">
         <img src={folder} alt="experience-icon" />
         Personal Projects
