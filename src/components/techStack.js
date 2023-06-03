@@ -3,7 +3,7 @@ import setting from '../assets/settings.png'
 
 function TechStack() {
   return (
-    <section className="techstack-wrapper m-60">
+    <section id='techStack' className="slide techstack-wrapper m-60">
         <p className="sub-heading m-30"><img src={setting} alt='account-icon'/>Tech Stacks
         </p>
       <div className='language m-40'>
