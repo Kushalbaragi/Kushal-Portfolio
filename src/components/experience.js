@@ -3,6 +3,7 @@ import company from '../assets/office.png'
 import experience from '../assets/briefcase.png'
 import send from '../assets/send.png';
 import arrowRight from '../assets/arrow-right.png'
+import resume from '../assets/KushalBaragi_FrontEnd.pdf';
 
 
 function Experience() {
@@ -17,7 +18,7 @@ function Experience() {
             <p className='sub-title'>Project 01</p>
             <p className='sub-heading m-15'>Olay-Australia</p>
             <p className='body-txt'><strong>Role :</strong> Worked as front end developer and Got exposure to UI-development, Github, Azure, GA-GTM Integration and SEO Optimisation</p>
-            <button className='button-primary'>Livesite<img src={send} alt='send-icon'/></button>
+            <a href="https://olay.com.au/en-au" target='_blank' rel="noreferrer"><button className='button-primary'>Livesite<img src={send} alt='send-icon'/></button></a>
           </div>
         </div>
         <div className='slide projects m-21'>
@@ -25,7 +26,7 @@ function Experience() {
             <p className='sub-title'>Project 02</p>
             <p className='sub-heading m-15'>Bodewell</p>
             <p className='body-txt'><strong>Role :</strong> Took ownership for Homepage, product detail page & custom page implementation. improved website performance by taking several steps to reduce JS file loading</p>
-            <button className='button-primary'>Livesite<img src={send} alt='send-icon'/></button>
+            <a href="https://bodewellskin.com/" target='_blank' rel="noreferrer"><button className='button-primary'>Livesite<img src={send} alt='send-icon'/></button></a>
           </div>
         </div>
         <div className='slide projects m-21'>
@@ -33,10 +34,10 @@ function Experience() {
             <p className='sub-title'>Project 03</p>
             <p className='sub-heading m-15'>Lifeshield</p>
             <p className='body-txt'><strong>Role :</strong> Implemented Animation with GSAP, took ownership of third party integration with site, Product page, cart page, checkout page, email templates and improved accessibility</p>
-            <button className='button-primary'>Livesite<img src={send} alt='send-icon'/></button>
+            <a href="https://lifeshieldvitamins.com/" target='_blank' rel="noreferrer"><button className='button-primary'>Livesite<img src={send} alt='send-icon'/></button></a>
           </div>
         </div>
-        <div className='resume'><img src={arrowRight} alt='arrow-right'/>Download Resume</div>
+<div className='resume'><img src={arrowRight} alt='arrow-right'/><a href={resume} target='_blank' rel="noreferrer">Download Resume</a></div>
 
     </div>
   )

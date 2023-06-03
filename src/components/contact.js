@@ -13,15 +13,15 @@ function Contact() {
         <img src={hand} alt="office-icon" />
       </p>
       <p className='body-txt'>Please feel free to contact me and I will get back to you as soon as I can</p>
-      <form>
-        <input className='m-40' type="text" name='name' placeholder="Enter Your Name"/>
-        <input className='m-40' type="email" name='email' placeholder="Enter Your Email"/>
-        <input className='m-40' type="text" name='message' placeholder="Your Message"/>
+      <form action='https://getform.io/f/71942e5b-c3c4-4f75-9b4d-2f3f07d3f640' method="POST">
+        <input id='name' className='m-40' type="text" name='name' placeholder="Enter Your Name"/>
+        <input id='email' className='m-40' type="email" name='email' placeholder="Enter Your Email"/>
+        <input id='message' className='m-40' type="text" name='message' placeholder="Your Message"/>
       <button className='button-primary'>Submit <img src={external} alt='send-icon'/></button>
       </form>
       <div className='bottom-wrapper'>
       <p className="bottom body-txt"><img src={mail} alt='mail-icon'/>Email : <a href='mailto:kushalbaragi83@gmail.com'>Kushalbaragi83@gmail.com</a></p>
-      <p className="bottom body-txt"><img src={location} alt='location-icon'/>Bangalore, Karnataka, India</p>
+      <p className="bottom body-txt" ><img src={location} alt='location-icon'/>Bangalore, Karnataka, India</p>
       </div>
       <div style={{textAlign:'center'}}>
 

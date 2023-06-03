@@ -1,7 +1,27 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import gsap from 'gsap';
 import setting from '../assets/settings.png'
 
 function TechStack() {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show");
+        }
+      });
+    });
+
+    let hiddenElement = document.querySelectorAll(".techstack-wrapper .button-secondary");
+    hiddenElement.forEach((el) => observer.observe(el));
+    gsap.from(hiddenElement,{
+      stagger:1,
+    })
+  });
+
+
   return (
     <section id='techStack' className="slide techstack-wrapper m-60">
         <p className="sub-heading m-30"><img src={setting} alt='account-icon'/>Tech Stacks

@@ -1,9 +1,27 @@
-import React from "react";
+import React, {useEffect} from "react";
+import {gsap} from 'gsap';
 import folder from "../assets/folder-plus.png";
 import external from "../assets/External.png";
 import gitHub from "../assets/gitHub.png";
 
 function Projects() {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show");
+        }
+      });
+    });
+
+    let hiddenElement = document.querySelectorAll(".card");
+    hiddenElement.forEach((el) => observer.observe(el));
+    gsap.from(hiddenElement,{
+      stagger:1,
+    })
+  });
   return (
     <div id='personal-projects' className="projects-wrapper m-60">
       <p className="sub-heading">
