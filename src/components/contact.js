@@ -14,9 +14,9 @@ function Contact() {
       </p>
       <p className='body-txt'>Please feel free to contact me and I will get back to you as soon as I can</p>
       <form action='https://getform.io/f/71942e5b-c3c4-4f75-9b4d-2f3f07d3f640' method="POST">
-        <input id='name' className='m-40' type="text" name='name' placeholder="Enter Your Name"/>
-        <input id='email' className='m-40' type="email" name='email' placeholder="Enter Your Email"/>
-        <input id='message' className='m-40' type="text" name='message' placeholder="Your Message"/>
+        <input id='name' className='m-40' type="text" name='name' placeholder="Enter Your Name" required/>
+        <input id='email' className='m-40' type="email" name='email' placeholder="Enter Your Email" required/>
+        <input id='message' className='m-40' type="text" name='message' placeholder="Your Message" required/>
       <button className='button-primary'>Submit <img src={external} alt='send-icon'/></button>
       </form>
       <div className='bottom-wrapper'>
